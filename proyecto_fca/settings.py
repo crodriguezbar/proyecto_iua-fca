@@ -25,6 +25,7 @@ SECRET_KEY = 'django-insecure-r-@93viu6ilt+z*du21mb#=yw@0h!=*!^l!@*1=%4vg0p-*k&6
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+STATICFILES_DIRS = ["D:/Users/crodr/Proyectos/proyecto_iua-fca/app_fca/templates/static"]
 ALLOWED_HOSTS = []
 
 
@@ -37,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'app_fca', #se hace al crear la app
 ]
 
 MIDDLEWARE = [
@@ -54,7 +56,7 @@ ROOT_URLCONF = 'proyecto_fca.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'], #vinculada a linea 16, variable BASE_DIR
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

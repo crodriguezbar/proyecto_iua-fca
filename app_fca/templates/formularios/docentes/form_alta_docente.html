@@ -1,0 +1,66 @@
+{% extends 'static/inicio.html' %}
+{% load static %}
+{% block contenido %} 
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static '../static/css/style_form_alta_docente.css'%}"/>
+</head>
+
+<body>
+    <div class="container" id="advanced-search-form">
+        <h2><b>ALTA DOCENTE</b></h2>
+        
+        <form action="/altadocente/" method="POST"> {% csrf_token %}
+            <div class="form-group">
+                <label for="first-name">Nombre</label>
+                <input type="text" class="form-control" placeholder="Nombre" id="first-name" >
+            </div>
+            <div class="form-group">
+                <label for="last-name">Apellido</label>
+                <input type="text" class="form-control" placeholder="Apellido" id="last-name">
+            </div>
+            <div class="form-group">
+                <label for="country">N° de documento</label>
+                <input type="number" class="form-control" placeholder="DNI" id="country">
+            </div>
+            <div class="form-group">
+                <label for="age">Titulo de Grado</label>
+                <input type="text" class="form-control" placeholder="Titulo de grado" id="age">
+            </div>
+            <div class="form-group">
+                <label for="email">Titulo de Posgrado</label>
+                <input type="text" class="form-control" placeholder="Titulo de posgrado" id="email"> 
+            </div>
+            <div class="form-group">
+                <label for="category">Cantidad de horas a asignar</label>
+                <input type="number" class="form-control" placeholder="Horas a asignar" id="category">
+            </div>
+            <div class="form-group">
+                <label>Metodo de alta</label>
+                <div class="radio">
+                    <label class="radio-inline">
+                        <input type="radio" name="optradio">Seleccion docente</label>
+                    <label class="radio-inline">
+                        <input type="radio" name="optradio">Necesidad y urgencia</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="number">Fecha de alta</label>
+                <input type="date" class="form-control" placeholder="Fecha de alta" id="number">
+            </div>
+            <div class="clearfix"></div>
+            <button type="submit" class="btn btn-info btn-lg btn-responsive" id="search"> <span class="fa fa-save"></span>   Guardar</button>
+            <div class="clearfix"></div>
+            <button type="submit" class="btn btn-info btn-lg btn-responsive" id="search"> <span class="fa fa-save"></span>   Guardar</button>
+        </form>
+    </div>
+</body>
+</html>
+
+{% endblock %}
