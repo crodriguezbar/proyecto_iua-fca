@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-r-@93viu6ilt+z*du21mb#=yw@0h!=*!^l!@*1=%4vg0p-*k&6
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-STATICFILES_DIRS = ["D:/Users/crodr/Proyectos/proyecto_iua-fca/app_fca/templates/static"]
+STATICFILES_DIRS = ["app_fca/templates/static"]
 ALLOWED_HOSTS = []
 
 
