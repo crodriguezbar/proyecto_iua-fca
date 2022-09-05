@@ -24,8 +24,8 @@
                 <div class='dashboard-nav-dropdown'>
                     <a href="#!" class="dashboard-nav-item dashboard-nav-dropdown-toggle"><i class="fas fa-folder"></i>Carreras</a>
                     <div class='dashboard-nav-dropdown-menu'>
-                        <a href="#" class="dashboard-nav-dropdown-item">XXX</a>
-                        <a href="#" class="dashboard-nav-dropdown-item">XXX</a>
+                        <a href={% url 'altacarrera' %} class="dashboard-nav-dropdown-item">Alta</a>
+                        <a href={% url 'reportealtacarerras' %} class="dashboard-nav-dropdown-item">Reportes</a>
                         <a href="#" class="dashboard-nav-dropdown-item">XXX</a>
                         <a href="#" class="dashboard-nav-dropdown-item">XXX</a>
                     </div>
@@ -36,13 +36,15 @@
                         <a href={% url 'altadocente' %} class="dashboard-nav-dropdown-item">Alta</a>
                         <a href="#" class="dashboard-nav-dropdown-item">Baja</a>
                         <a href="#" class="dashboard-nav-dropdown-item">Reportes</a>
+                        <a href={% url 'reportealtadocente' %} class="dashboard-nav-dropdown-item">Reporte por fecha de alta</a>
+                        <a href={% url 'reportealtadocentedni' %} class="dashboard-nav-dropdown-item">Reporte por DNI</a>     
                     </div>
                 </div>
                 <div class='dashboard-nav-dropdown'>
                     <a href="#!" class="dashboard-nav-item dashboard-nav-dropdown-toggle"><i class="fas fa-edit"></i>Comisiones</a>
                     <div class='dashboard-nav-dropdown-menu'>
-                        <a href="#" class="dashboard-nav-dropdown-item">ZZZ</a>
-                        <a href="#" class="dashboard-nav-dropdown-item">ZZZ</a>
+                        <a href={% url 'altacomision' %} class="dashboard-nav-dropdown-item">Alta</a>
+                        <a href={% url 'reportecomision' %} class="dashboard-nav-dropdown-item">Reportes</a>
                         <a href="#" class="dashboard-nav-dropdown-item">ZZZ</a>
                     </div>
                 </div>

@@ -1,0 +1,63 @@
+{% extends 'static/inicio.html' %}
+{% load static %}
+{% block contenido %} 
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+    <br>
+    <br>
+    <br>
+    <div class="container" id="advanced-search-form">
+        <h2><b>REPORTE COMISIONES</b></h2>
+    <form action="" method="GET"> {% csrf_token %}
+        {{formulario.as_table}}
+        <button type="submit" value='Buscar' class="btn btn-primary">Buscar</button>
+    <br>
+    <br>     
+    <div class='row col-12 justify-content-end mb-2 pr-0'>
+        <a class="btn btn-success col-md-3" href={% url 'altacomision' %}>Agregar comision</a>
+    </div>
+    </form>   
+
+        <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Carrera</th>
+            <th scope="col">Asignatura</th>
+            <th scope="col">Codigo</th>
+            <th scope="col">Comision</th>
+            <th scope="col">Modalidad</th>
+            <th scope="col">Horario</th>
+            <th scope="col">Editar</th>
+            <th scope="col">Eliminar</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for comision in comisiones %}
+          <tr>
+            <th scope="row">{{comision.id}}</th>
+            <td>{{comision.carrera}}</td>
+            <td>{{comision.asignatura}}</td>
+            <td>{{comision.codigo}}</td>
+            <td>{{comision.comision}}</td>
+            <td>{{comision.modalidad}}</td>
+            <td>{{comision.horario}}</td>
+            <td><a class="btn btn-warning" href="#">Editar</td>
+            <td><a class="btn btn-danger" href="#">Eliminar</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    <br>
+</body>
+{% endblock %}
+</html>

@@ -23,15 +23,15 @@
     {% endif %}
     
     <div class="container" id="advanced-search-form">
-        <h2><b>ALTA DOCENTE</b></h2>
+        <h2><b>ALTA COMISION</b></h2>
     <form action="" method="POST"> {% csrf_token %}
         {{formulario|crispy}}
         <br>
         <button type="submit" value='Guardar' class="btn btn-primary">Guardar</button>
         <br>
-        {% if registrado %}
+        {% if registro %}
         <div class="alert alert-success" role="alert">
-            El docente {{docente_registrado.apellido}}, {{docente_registrado.nombre}}, DNI {{docente_registrado.dni}} ha sido registrado existosamente.
+            La comision {{comision_registrada.comision}} de la asignatura {{comision_registrada.asignatura}} de la carrera {{comision_registrada.carrera}} ha sido registrada existosamente.
         </div>
         {% endif %}
     </form>
